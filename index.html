@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            margin-top:20%;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <p id="value">0</p>
+
+    <button id="dec">Decrease</button>
+    <button id="res">Reset</button>
+    <button id="inc">Increase</button>
+    
+    <script>
+        let val=document.getElementById("value");
+        let decrement=document.getElementById("dec");
+        let reset=document.getElementById("res");
+        let increment = document.getElementById("inc");
+        decrement.addEventListener("click",()=>{
+            val.style.color="red";
+            val.textContent= parseInt(val.textContent)-1;
+        })
+        increment.addEventListener("click",()=>{
+            val.style.color="green";
+            val.textContent= parseInt(val.textContent)+1;
+        })
+        reset.addEventListener("click",()=>{
+            val.textContent= "0";
+        })
+    </script>
+</body>
+</html>
